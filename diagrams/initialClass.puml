@@ -1,0 +1,121 @@
+@startuml
+interface EventManager {
+    +addEvent(Event event);
+    +deleteEvent(Event event);
+    +updateEvent(Event event);
+    +displayEvents();
+}
+
+class EventService implements EventManager {
+    +addEvent(Event event);
+    +deleteEvent(Event event);
+    +updateEvent(Event event);
+    +displayEvents();
+}
+
+abstract class CalendarEvent {
+    -String name;
+    -Date startTime;
+    -Date endTime;
+    +getDuration();
+    +getName();
+    +setName(String name);
+    +getStartTime();
+    +setStartTime(Date startTime);
+    +getEndTime();
+    +setEndTime(Date endTime);
+}
+
+class Event extends CalendarEvent {
+    -String description;
+    -boolean isRecurring;
+    -int priority;
+    -User owner;
+    +getDescription();
+    +setDescription(String description);
+    +isRecurring();
+    +setRecurring(boolean isRecurring);
+    +getPriority();
+    +setPriority(int priority);
+}
+
+class Reminder extends CalendarEvent {
+    -String reminderMessage;
+    +getReminderMessage();
+    +setReminderMessage(String message);
+}
+
+class Task extends Reminder {
+  -String taskDescription;
+  +getTaskDescription();
+  +setTaskDescription(String taskDescription);
+  +isTaskDone();
+  +setTaskDone(boolean isTaskDone);
+}
+
+class CalendarPage {
+    -Week[] weeks;
+    -Day[] days;
+    +displayCalendar();
+}
+
+class Week {
+    -Day[] days;
+    +getEvents();
+}
+
+class Day {
+    +getEvents();
+}
+
+class User {
+    -String username;
+    -String password;
+    +getUserName();
+    +setUserName(String username);
+    +getUserPass();
+    +setUserPass(String password);
+}
+
+class UserManager {
+    +createUser(User user);
+    +deleteUser(User user);
+    +getUser(String username);
+    +updateUser(User user);
+    +login(String username, String password);
+    +logout(User user);
+}
+
+class Database {
+    +storeEvent(Event event, User user);
+    +deleteEvent(Event event);
+    +updateEvent(Event event);
+    +retrieveEvents(User user);
+    +storeUser(User user);
+    +deleteUser(User user);
+    +updateUser(User user);
+}
+
+class DateUtility {
+    +formatDate(Date date);
+    +calculateDuration(Date start, Date end);
+}
+
+class ValidationUtility {
+    +validateUserInput(String input);
+    +validateLoginCredentials(String username, String password);
+}
+
+EventService --> Database
+Event --> User
+EventService --> Event
+Reminder --> Event
+Task --> Reminder
+CalendarPage --> Week
+Week --> Day
+Day --> Event
+UserManager --> User
+UserManager --> Database
+Database --> User
+Database --> Event
+@enduml

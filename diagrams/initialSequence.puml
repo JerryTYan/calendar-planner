@@ -1,0 +1,27 @@
+@startuml
+actor User
+User -> UserManager : login(String username, String password)
+UserManager -> ValidationUtility : validateLoginCredentials(String username, String password)
+CalendarPage --> User: displayCalendar()
+User -> EventService : new event: name, duration, startTime, endTime, priority, description
+EventService -> Event : addEvent(name)
+Event -> CalendarEvent: new CalendarEvent
+EventService <-- CalendarEvent : request info (duration, startTime, endTime, prio, desc)
+EventService -> CalendarEvent : setDuration(duration)
+EventService -> CalendarEvent : setStartTime(startTime)
+EventService -> CalendarEvent : setEndTime(endTime)
+EventService <-- CalendarEvent : return new CalendarEvent
+CalendarPage <-- EventService : return new CalendarEvent
+User <-- CalendarPage : displayCalendar()
+User -> EventService : new reminder: name, date, time, message
+EventService -> Event : addReminder(name)
+Event -> Reminder : new Reminder
+EventService <-- Reminder : request info
+EventService -> Reminder: setName(name)
+EventService -> Reminder: setDate(date)
+EventService -> Reminder: setTime(time)
+EventService -> Reminder: setDesc(desc)
+EventService <-- Reminder : return new Reminder
+CalendarPage <-- EventService : return new Reminder
+User <-- CalendarPage : displayCalendar()
+@enduml
