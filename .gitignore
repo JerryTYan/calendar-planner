@@ -66,8 +66,11 @@ build/
 # Ignore the db.properties file
 db.properties
 
-#Ignore the .idea folder
+# Ignore the .idea folder
 .idea/
 !.idea/encoding.xml
 !.idea/misc.xml
 !.idea/vcs.xml
+
+# Ignore the node_modules folder
+node_modules/
