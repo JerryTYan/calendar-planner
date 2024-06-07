@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="/WEB-INF/jsp/shared/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body>
 <div class="container">
-	<h1>Hi Welcome to MyCalendarPlanner!</h1>
+	<h1>Welcome to MyCalendarPlanner!</h1>
 </div>
 </body>
 </html>
