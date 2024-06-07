@@ -7,14 +7,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-5 pt-0">
-        <form>
+        <form id="signupForm" novalidate onsubmit="return validateSignupForm()">
           <div class="form-floating mb-3">
-            <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com" required>
             <label for="floatingInput">Email address</label>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Password</label>
+            <div class="invalid-feedback">Please enter your password.</div>
           </div>
           <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
           <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>

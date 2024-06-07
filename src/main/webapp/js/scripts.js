@@ -35,5 +35,52 @@ function typeWriter() {
     }
   }
 }
-
 typeWriter();
+
+function validateLoginForm() {
+    var email = document.getElementById('loginEmail');
+    var password = document.getElementById('loginPassword');
+    var isValid = true;
+
+    if (!email.checkValidity()) {
+      email.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      email.classList.remove('is-invalid');
+      email.classList.add('is-valid');
+    }
+
+    if (!password.checkValidity()) {
+      password.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      password.classList.remove('is-invalid');
+      password.classList.add('is-valid');
+    }
+
+    return isValid;
+}
+
+function validateSignupForm() {
+    var email = document.getElementById('floatingInput');
+    var password = document.getElementById('floatingPassword');
+    var isValid = true;
+
+    if (!email.checkValidity()) {
+      email.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      email.classList.remove('is-invalid');
+      email.classList.add('is-valid');
+    }
+
+    if (!password.checkValidity()) {
+      password.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      password.classList.remove('is-invalid');
+      password.classList.add('is-valid');
+    }
+
+    return isValid;
+}
