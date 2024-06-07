@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/shared/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/shared/signupModal.jsp" %>
+<%@ include file="/WEB-INF/jsp/shared/loginModal.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,7 @@
     <link rel="stylesheet" href="<%= request.getContextPath() %>/css/site.css">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/vendor/bootstrap/css/bootstrap.min.css">
 </head>
-<body>
+<body style="padding-top: 70px;">
   <div class="px-4 pt-5 my-5 text-center border-bottom">
     <div class="col-lg-6 mx-auto">
       <h1 class="display-4 fw-bold text-body-emphasis">
@@ -18,8 +20,8 @@
       Whether for personal use, family planning, or business meetings, our calendar app provides the tools you need to stay on top of your tasks and appointments.
       Enjoy customizable views and real-time updates to keep your plans up-to-date.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Get started</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Login</button>
+        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#modalSignin">Get started</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</button>
       </div>
     </div>
     <div class="overflow-hidden" style="max-height: 35vh;">
@@ -28,6 +30,7 @@
       </div>
     </div>
   </div>
+  <script src="<%= request.getContextPath() %>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<%= request.getContextPath() %>/js/scripts.js"></script>
 <%@ include file="/WEB-INF/jsp/shared/footer.jsp" %>
 </body>
