@@ -1,0 +1,21 @@
+#text {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: inherit;
+  color: black;
+  display: inline;
+}
+
+.caret {
+  width: 3px;
+  height: 48px;
+  background-color: #0d6efd;
+  display: inline-block;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
