@@ -12,5 +12,6 @@
 <div class="container">
 	<h1>Welcome to MyCalendarPlanner!</h1>
 </div>
+<%@ include file="/WEB-INF/jsp/shared/footer.jsp" %>
 </body>
 </html>
