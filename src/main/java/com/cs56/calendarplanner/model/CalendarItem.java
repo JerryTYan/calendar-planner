@@ -6,76 +6,34 @@ import org.joda.time.*;
 public abstract class CalendarItem {
 
     private boolean isScheduled;
-    protected LocalDate startDate;  // If isScheduled == false (reminders/tasks), Date variables will be null
-    protected LocalDate endDate;
+    protected MutableDateTime startDate;  // If isScheduled == false (reminders/tasks), Date variables will be null
+    protected MutableDateTime endDate;
     protected boolean hasTime;
-    protected LocalTime startTime;
-    protected LocalTime endTime;
     protected String title;
     protected String description;
 
 
-    public boolean getScheduled() {
-        return this.isScheduled;
-    }
+    public abstract boolean isScheduled();
 
-    public void setScheduled(boolean scheduled) {
-        isScheduled = scheduled;
-    }
+    public abstract void setScheduled(boolean scheduled);
 
-    public LocalDate getStartDate() {
-        return startDate;
-    }
+    public abstract MutableDateTime getStartDate();
 
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
-    }
+    public abstract void setStartDate(MutableDateTime startDate);
 
-    public LocalDate getEndDate() {
-        return endDate;
-    }
+    public abstract MutableDateTime getEndDate();
 
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
+    public abstract void setEndDate(MutableDateTime endDate);
 
-    public boolean isHasTime() {
-        return hasTime;
-    }
+    public abstract boolean isHasTime();
 
-    public void setHasTime(boolean hasTime) {
-        this.hasTime = hasTime;
-    }
+    public abstract void setHasTime(boolean hasTime);
 
-    public LocalTime getStartTime() {
-        return startTime;
-    }
+    public abstract String getTitle();
 
-    public void setStartTime(LocalTime startTime) {
-        this.startTime = startTime;
-    }
+    public abstract void setTitle(String title);
 
-    public LocalTime getEndTime() {
-        return endTime;
-    }
+    public abstract String getDescription();
 
-    public void setEndTime(LocalTime endTime) {
-        this.endTime = endTime;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    public abstract void setDescription(String description);
 }
