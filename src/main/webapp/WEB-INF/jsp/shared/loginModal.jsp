@@ -9,12 +9,12 @@
       <div class="modal-body p-5 pt-0">
         <form id="loginForm" action="<%= request.getContextPath() %>/login" method="post" novalidate>
           <div class="form-floating mb-3">
-            <input type="email" class="form-control rounded-3" id="loginEmail" placeholder="name@example.com" required>
+            <input type="email" class="form-control rounded-3" id="loginEmail" name="loginEmail" placeholder="name@example.com" required>
             <label for="loginEmail">Email address</label>
             <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control rounded-3" id="loginPassword" placeholder="Password" required>
+            <input type="password" class="form-control rounded-3" id="loginPassword" name="loginPassword" placeholder="Password" required>
             <label for="loginPassword">Password</label>
             <div class="invalid-feedback">Please enter your password.</div>
           </div>
