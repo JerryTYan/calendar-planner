@@ -13,7 +13,7 @@ public class DatabaseUtil {
     private static String password;
 
     static {
-        try (InputStream input = DatabaseUtil.class.getClassLoader().getResourceAsStream("db.properties")) {
+        try (InputStream input = DatabaseUtil.class.getClassLoader().getResourceAsStream("db/db.properties")) {
             Properties prop = new Properties();
             if (input == null) {
                 System.out.println("Sorry, unable to find db.properties");

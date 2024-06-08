@@ -64,7 +64,7 @@ build/
 .DS_Store
 
 # Ignore the db.properties file
-db.properties
+src/main/resources/db/db.properties
 
 # Ignore the .idea folder
 .idea/

@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-5 pt-0">
-        <form id="loginForm" novalidate onsubmit="return validateLoginForm()">
+        <form id="loginForm" action="<%= request.getContextPath() %>/login" method="post" novalidate>
           <div class="form-floating mb-3">
             <input type="email" class="form-control rounded-3" id="loginEmail" placeholder="name@example.com" required>
             <label for="loginEmail">Email address</label>
