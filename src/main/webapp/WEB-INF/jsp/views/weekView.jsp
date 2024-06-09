@@ -36,13 +36,13 @@
                         %>
                         <tr>
                             <th scope="row" class="text-center"><%= timeLabel %></th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td>&nbsp;<input type="text"></td>
+                            <td>&nbsp;<input type="text"></td>
+                            <td>&nbsp;<input type="text"></td>
+                            <td>&nbsp;<input type="text"></td>
+                            <td>&nbsp;<input type="text"></td>
+                            <td>&nbsp;<input type="text"></td>
+                            <td>&nbsp;<input type="text"></td>
                         </tr>
                         <%
                             }
