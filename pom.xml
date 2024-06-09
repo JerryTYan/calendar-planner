@@ -86,7 +86,7 @@
                     <driver>com.mysql.cj.jdbc.Driver</driver>
                     <url>jdbc:mysql://localhost:3306/calendar_planner_db</url>
                     <user>calendar_user</user>
-                    <password>pword</password>
+                    <password>password</password>
                     <locations>
                         <location>classpath:db/migration</location>
                     </locations>
