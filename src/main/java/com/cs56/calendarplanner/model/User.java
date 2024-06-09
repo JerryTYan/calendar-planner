@@ -1,10 +1,16 @@
 package com.cs56.calendarplanner.model;
 
+import java.util.LinkedList;
+
 public class User {
     private int id;
     private String username;
     private String password;
     private String email;
+    private LinkedList<Event> eventsList;
+    private LinkedList<Reminder> remindersList;
+    private LinkedList<Task> tasksList;
+
 
     // Getters and Setters
     public int getId() {
