@@ -4,9 +4,6 @@ import org.joda.time.MutableDateTime;
 
 public class Event extends CalendarItem {
 
-    private boolean isAllDay;
-
-
     public Event(String title, String desc, MutableDateTime startDate, MutableDateTime endDate, boolean hasTime){
         this.title = title;
         this.description = desc;
@@ -14,6 +11,10 @@ public class Event extends CalendarItem {
         this.endDate = new MutableDateTime(endDate);
         this.hasTime = hasTime;
         this.isScheduled = true;
+    }
+
+    public boolean isAllDay(){
+        return !hasTime;
     }
 
 }
