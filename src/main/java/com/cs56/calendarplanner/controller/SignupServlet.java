@@ -33,7 +33,7 @@ public class SignupServlet extends HttpServlet {
         boolean userCreated = userDAO.createUser(newUser);
 
         if (userCreated) {
-            response.sendRedirect("login.jsp"); // Redirect to login page after successful registration
+            response.sendRedirect("homeView.jsp"); // Redirect to login page after successful registration
         } else {
             request.setAttribute("error", "Unable to create user. Please try again.");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/views/signup.jsp");
