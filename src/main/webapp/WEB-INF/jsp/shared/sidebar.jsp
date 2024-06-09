@@ -12,24 +12,6 @@
                     Home
                 </a>
             </li>
-            <li class="nav-item mb-4">
-                <a href="#" class="nav-link active" style="background-color: #495057; color: white;">
-                    <img src="<%= request.getContextPath() %>/images/calendar_week.svg" alt="Week Icon" width="24" height="24" class="me-2">
-                    Week
-                </a>
-            </li>
-            <li class="nav-item mb-4">
-                <a href="#" class="nav-link text-white">
-                    <img src="<%= request.getContextPath() %>/images/calendar_month.svg" alt="Month Icon" width="24" height="24" class="me-2">
-                    Month
-                </a>
-            </li>
-            <li class="nav-item mb-4">
-                <a href="#" class="nav-link text-white">
-                    <img src="<%= request.getContextPath() %>/images/calendar_year.svg" alt="Year Icon" width="24" height="24" class="me-2">
-                    Year
-                </a>
-            </li>
         </ul>
     </div>
 </div>

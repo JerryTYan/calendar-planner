@@ -65,8 +65,8 @@
                     <url>http://localhost:8080/manager/text</url>
                     <server>TomcatServer</server>
                     <path>/CalendarPlanner</path>
-                    <username>admin</username>
-                    <password>admin</password>
+                    <username>calendar_user</username>
+                    <password>password</password>
                 </configuration>
             </plugin>
             <plugin>
