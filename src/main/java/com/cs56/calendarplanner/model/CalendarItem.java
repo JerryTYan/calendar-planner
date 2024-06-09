@@ -5,35 +5,58 @@ import org.joda.time.*;
 
 public abstract class CalendarItem {
 
-    private boolean isScheduled;
+    protected boolean isScheduled;
     protected MutableDateTime startDate;  // If isScheduled == false (reminders/tasks), Date variables will be null
     protected MutableDateTime endDate;
     protected boolean hasTime;
     protected String title;
     protected String description;
 
+    
+    public boolean isScheduled() {
+        return isScheduled;
+    }
+    public void setScheduled(boolean scheduled) {
+        this.isScheduled = scheduled;
+    }
 
-    public abstract boolean isScheduled();
+    public MutableDateTime getStartDate() {
+        return startDate;
+    }
 
-    public abstract void setScheduled(boolean scheduled);
-
-    public abstract MutableDateTime getStartDate();
-
-    public abstract void setStartDate(MutableDateTime startDate);
-
-    public abstract MutableDateTime getEndDate();
-
-    public abstract void setEndDate(MutableDateTime endDate);
-
-    public abstract boolean isHasTime();
-
-    public abstract void setHasTime(boolean hasTime);
-
-    public abstract String getTitle();
-
-    public abstract void setTitle(String title);
-
-    public abstract String getDescription();
-
-    public abstract void setDescription(String description);
+    public void setStartDate(MutableDateTime newStartDate) {
+        startDate.setDate(newStartDate);
+    }
+    
+    public MutableDateTime getEndDate() {
+        return endDate;
+    }
+    
+    public void setEndDate(MutableDateTime newEndDate) {
+        this.endDate.setDate(newEndDate);
+    }
+    
+    public boolean isHasTime() {
+        return hasTime;
+    }
+    
+    public void setHasTime(boolean hasTime) {
+        this.hasTime = hasTime;
+    }
+    
+    public String getTitle() {
+        return this.title;
+    }
+    
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    
+    public String getDescription() {
+        return this.description;
+    }
+    
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
